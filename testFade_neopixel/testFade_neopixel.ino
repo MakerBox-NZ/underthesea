@@ -17,9 +17,10 @@ void setup() {
 
 // *** CHANGE COLOURS IN VOID LOOP ***
 void loop() { 
-  FadeInOut(0, 0, 255); //red, green, blue
+  int randNumber = random(5, 30); //randomises delay
+  FadeInOut(0, 0, 255, randNumber); //red, green, blue
   delay(500);
-  FadeInOut(0, 255, 0);
+  FadeInOut(0, 255, 0, randNumber);
 }
 
 
@@ -34,7 +35,7 @@ void loop() {
 
 
 
-void FadeInOut(byte red, byte green, byte blue){
+void FadeInOut(byte red, byte green, byte blue, int randNumber){
   float r, g, b;
       
   for(int k = 0; k < 256; k=k+1) { 
@@ -43,7 +44,7 @@ void FadeInOut(byte red, byte green, byte blue){
     b = (k/256.0)*blue;
     setAll(r,g,b);
     showPixels();
-    delay(10);
+    delay(randNumber);
   }
   
 
@@ -54,28 +55,7 @@ void FadeInOut(byte red, byte green, byte blue){
     b = (k/256.0)*blue;
     setAll(r,g,b);
     showPixels();
-    delay(10);
-  }
-
-        
-  for(int k = 0; k < 256; k=k+1) { 
-    r = (k/256.0)*red;
-    g = (k/256.0)*green;
-    b = (k/256.0)*blue;
-    setAll(r,g,b);
-    showPixels();
-    delay(20);
-  }
-  
-
-       
-  for(int k = 255; k >= 0; k=k-2) {
-    r = (k/256.0)*red;
-    g = (k/256.0)*green;
-    b = (k/256.0)*blue;
-    setAll(r,g,b);
-    showPixels();
-    delay(5);
+    delay(randNumber);
   }
 
 }
