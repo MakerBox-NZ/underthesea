@@ -1,6 +1,6 @@
 #include <Adafruit_NeoPixel.h> //imports NeoPixel library
 #define PIN 4  //pin number
-#define LED_COUNT 10 //number of LEDs in strip
+#define LED_COUNT 176 //number of LEDs in strip 48
 
 //(Number of pixels attached to Arduino, pin connected to NeoPixels, third parameter may need changed on older NeoPixel strips)
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(LED_COUNT, PIN, NEO_GRB + NEO_KHZ800);
@@ -19,6 +19,8 @@ void loop() {
   Fade(0, 150, 150, randNumber); //red, green, blue
   Fade(100, 0, 50, randNumber);
   delay(20);
+  Fade(0, 255, 150, randNumber);
+  Fade(197, 213, 57, randNumber);
 }
 
 
