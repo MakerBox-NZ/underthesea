@@ -14,7 +14,7 @@ void setup() {
 
 // *** CHANGE COLOURS IN VOID LOOP ***
 void loop() { 
-  int randNumber = random(5, 30); //randomises delay
+  int randNumber = random(5, 20); //randomises delay
 
 
 
@@ -27,8 +27,49 @@ void loop() {
 
   //fade takes RGB values, from (0,0,0) up to (255,255,255)
   //ADD TO CODE BELOW
-  fade(0, 150, 150, randNumber); //red, green, blue, random fade
-  fade(100, 0, 0, randNumber);
+  //fade(0, 150, 150, randNumber); //red, green, blue, random fade
+  //fade(200,50,255, randNumber) ; //purple
+  //fade(5,5,60, randNumber); //faint blue
+  fade(0,0,255,randNumber); //darker blue
+  fade(0,255,255,randNumber); //sea green
+  //fade(210,200,150,randNumber); //yellow-y orange
+
+  //fade(196,56,236,randNumber);//white/yellow/orange
+  //fade(255,0,255,randNumber); //pinky purple
+  //fade(200, 170, 150, randNumber); //yellow?
+  //fade(150, 300, 100, randnumber); 
+  //fade(255, 255, 255,randNumber);//turqoise.
+  //fade(234, 123, 211,randNumber);//yellowy orange.
+  //fade(20, 99, 101, randNumber);
+  //fade(10,100,240,randNumber);
+
+
+  fade(1, 2, 3, randNumber);
+  fade(255,240,1,randNumber);
+  fade(0,244,244, randNumber);
+
+  fade(255,0,255,randNumber );
+  fade(6,6,6,randNumber);
+  fade(156,247,0,randNumber);
+   
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
 
 
 
@@ -56,7 +97,7 @@ void loop() {
 
 
 
-
+YEET LOL 666
 
 
 
@@ -98,5 +139,4 @@ void setAll(byte red, byte green, byte blue) {
   }
  pixels.show();
 }
-
 
